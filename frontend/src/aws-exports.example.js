@@ -1,5 +1,5 @@
-# AWS Cognito Configuration - Example
-# Copy to aws-exports.js and fill in your values
+// AWS Cognito Configuration - Example
+// Copy to aws-exports.js and fill in your values
 
 const awsconfig = {
   Auth: {

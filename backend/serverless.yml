@@ -133,6 +133,7 @@ resources:
 
 custom:
   # Remplacer par l'ID de votre User Pool Cognito après création
+  # Format attendu: eu-west-1_XXXXXXXXX
   cognitoUserPoolId: 'YOUR_COGNITO_USER_POOL_ID'
 
   cors:

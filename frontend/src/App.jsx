@@ -12,7 +12,7 @@ Amplify.configure(awsconfig);
 function App() {
   return (
     <Authenticator socialProviders={[]}>
-      {({ signOut, user }) => (
+      {({ user }) => (
         <div>
           <Navbar user={user} />
           {user ? <Dashboard /> : <Home />}

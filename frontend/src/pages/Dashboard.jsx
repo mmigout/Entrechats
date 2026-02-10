@@ -31,6 +31,7 @@ const Dashboard = () => {
     try {
       const newAdherent = await createAdherent(adherentData);
       setAdherents([...adherents, newAdherent]);
+      // Note: Consider replacing alert() with a toast notification system for better UX
       alert('Adhérent créé avec succès !');
     } catch (err) {
       console.error('Erreur lors de la création:', err);
@@ -42,6 +43,7 @@ const Dashboard = () => {
     try {
       await deleteAdherent(id);
       setAdherents(adherents.filter(a => a.id !== id));
+      // Note: Consider replacing alert() with a toast notification system for better UX
       alert('Adhérent supprimé avec succès !');
     } catch (err) {
       console.error('Erreur lors de la suppression:', err);

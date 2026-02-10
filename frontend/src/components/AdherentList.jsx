@@ -41,6 +41,7 @@ const AdherentList = ({ adherents, onDelete, loading }) => {
                 <td style={styles.td}>
                   <button
                     onClick={() => {
+                      // Note: Consider replacing window.confirm() with a custom modal for better UX
                       if (window.confirm(`Voulez-vous vraiment supprimer ${adherent.prenom} ${adherent.nom} ?`)) {
                         onDelete(adherent.id);
                       }

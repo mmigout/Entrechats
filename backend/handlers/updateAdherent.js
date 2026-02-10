@@ -33,7 +33,7 @@ exports.handler = async (event) => {
     const allowedFields = ["nom", "prenom", "adresse", "email", "tel"];
 
     allowedFields.forEach((field) => {
-      if (body[field] !== undefined) {
+      if (body[field] !== undefined && body[field] !== null) {
         updateExpressions.push(`#${field} = :${field}`);
         expressionAttributeNames[`#${field}`] = field;
         expressionAttributeValues[`:${field}`] = body[field];
